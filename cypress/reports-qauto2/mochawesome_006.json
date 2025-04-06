@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-04-06T16:24:15.896Z",
+    "end": "2025-04-06T16:24:46.994Z",
+    "duration": 31098,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f967852e-68f9-4fb0-ae69-b4335eae6b91",
+      "title": "",
+      "fullFile": "cypress\\e2e\\garage_expenses.cy.js",
+      "file": "cypress\\e2e\\garage_expenses.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "23819076-1523-432e-80bb-c1b942176815",
+          "title": "Garage & Fuel Expenses Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add a new car",
+              "fullTitle": "Garage & Fuel Expenses Flow Add a new car",
+              "timedOut": null,
+              "duration": 18309,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_garagePage.garagePage.openAddCarForm();\n_garagePage.garagePage.fillCarForm('Audi', 'Q7', '123456');\n_garagePage.garagePage.submitCar();\n_garagePage.garagePage.carShouldBeVisible('Q7');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected <ngb-modal-window.d-block.modal.fade.show> not to exist in the DOM, but it was continuously found.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected <ngb-modal-window.d-block.modal.fade.show> not to exist in the DOM, but it was continuously found.\n    at Object.submitCar (webpack://aqa-cypress/./cypress/pages/garagePage.js:22:51)\n    at Context.eval (webpack://aqa-cypress/./cypress/e2e/garage_expenses.cy.js:25:15)",
+                "diff": null
+              },
+              "uuid": "4cadc5ff-743f-4eab-8424-50e5ee2e28a4",
+              "parentUUID": "23819076-1523-432e-80bb-c1b942176815",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add fuel expense to the car",
+              "fullTitle": "Garage & Fuel Expenses Flow Add fuel expense to the car",
+              "timedOut": null,
+              "duration": 12715,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_expensesPage.expensesPage.openFuelExpenseModal();\n_expensesPage.expensesPage.addFuelRecord('50', '100', '123600');\n_expensesPage.expensesPage.recordShouldExist('50');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Add fuel expense' within the selector: 'button' but never did.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Add fuel expense' within the selector: 'button' but never did.\n    at Object.openFuelExpenseModal (webpack://aqa-cypress/./cypress/pages/expensesPage.js:5:7)\n    at Context.eval (webpack://aqa-cypress/./cypress/e2e/garage_expenses.cy.js:30:17)",
+                "diff": null
+              },
+              "uuid": "655889b2-723d-4378-9ecf-f544effe7162",
+              "parentUUID": "23819076-1523-432e-80bb-c1b942176815",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4cadc5ff-743f-4eab-8424-50e5ee2e28a4",
+            "655889b2-723d-4378-9ecf-f544effe7162"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 31024,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports-qauto2",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

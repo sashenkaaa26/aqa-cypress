@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-06T18:52:22.623Z",
+    "end": "2025-04-06T18:52:52.415Z",
+    "duration": 29792,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "497d7612-34c6-4cf9-8a3f-90eaec296858",
+      "title": "",
+      "fullFile": "cypress\\e2e\\garage_expenses.cy.js",
+      "file": "cypress\\e2e\\garage_expenses.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e3035e04-b78e-45d2-b68f-f3e526793e99",
+          "title": "Garage & Fuel Expenses Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add a new car",
+              "fullTitle": "Garage & Fuel Expenses Flow Add a new car",
+              "timedOut": null,
+              "duration": 15172,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_garagePage.garagePage.openAddCarForm();\n_garagePage.garagePage.fillCarForm('Audi', 'Q7', '123456');\n_garagePage.garagePage.submitCar();\n_garagePage.garagePage.carShouldBeVisible('Q7');",
+              "err": {},
+              "uuid": "d4815f93-a5a7-4701-a693-d3b7966915d9",
+              "parentUUID": "e3035e04-b78e-45d2-b68f-f3e526793e99",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add fuel expense to the car",
+              "fullTitle": "Garage & Fuel Expenses Flow Add fuel expense to the car",
+              "timedOut": null,
+              "duration": 14483,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_expensesPage.expensesPage.openFuelExpenseModal();\n_expensesPage.expensesPage.addFuelRecord('50', '100', '123600');\n_expensesPage.expensesPage.recordShouldExist('50');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Add fuel expense' but never did.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Add fuel expense' but never did.\n    at Object.openFuelExpenseModal (webpack://aqa-cypress/./cypress/pages/expensesPage.js:44:7)\n    at Context.eval (webpack://aqa-cypress/./cypress/e2e/garage_expenses.cy.js:30:17)",
+                "diff": null
+              },
+              "uuid": "ec4d29b8-2160-4996-bfe6-298cc1d12c70",
+              "parentUUID": "e3035e04-b78e-45d2-b68f-f3e526793e99",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d4815f93-a5a7-4701-a693-d3b7966915d9"
+          ],
+          "failures": [
+            "ec4d29b8-2160-4996-bfe6-298cc1d12c70"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 29655,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports-qauto2",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

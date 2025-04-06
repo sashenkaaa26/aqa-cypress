@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-06T14:34:53.819Z",
+    "end": "2025-04-06T14:35:14.047Z",
+    "duration": 20228,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "7d1f9cfc-73d5-4522-8918-db6f62907c07",
+      "title": "",
+      "fullFile": "cypress\\e2e\\garage_expenses.cy.js",
+      "file": "cypress\\e2e\\garage_expenses.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d1391b14-d1e8-4380-a14f-9e403608e899",
+          "title": "Garage & Fuel Expenses Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add a new car",
+              "fullTitle": "Garage & Fuel Expenses Flow Add a new car",
+              "timedOut": null,
+              "duration": 20089,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_garagePage.garagePage.openAddCarForm();\n_garagePage.garagePage.fillCarForm('Audi', 'Q7', '100000');\n_garagePage.garagePage.submitCar();\n_garagePage.garagePage.carShouldBeVisible('Q7');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `button#userNavDropdown`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Garage & Fuel Expenses Flow`",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `button#userNavDropdown`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Garage & Fuel Expenses Flow`\n    at Context.eval (webpack://aqa-cypress/./cypress/support/commands.js:16:55)\n    at wrapped (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:138854:43)",
+                "diff": null
+              },
+              "uuid": "18ffcdc0-1c32-4f39-88b6-fe45798c7cdc",
+              "parentUUID": "d1391b14-d1e8-4380-a14f-9e403608e899",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add fuel expense to car",
+              "fullTitle": "Garage & Fuel Expenses Flow Add fuel expense to car",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_expensesPage.expensesPage.openExpenses();\n_expensesPage.expensesPage.addFuelRecord('50', '75');\n_expensesPage.expensesPage.recordShouldExist('50');",
+              "err": {},
+              "uuid": "aff82612-3117-4d13-a229-73f1a9d3d42c",
+              "parentUUID": "d1391b14-d1e8-4380-a14f-9e403608e899",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "18ffcdc0-1c32-4f39-88b6-fe45798c7cdc"
+          ],
+          "pending": [],
+          "skipped": [
+            "aff82612-3117-4d13-a229-73f1a9d3d42c"
+          ],
+          "duration": 20089,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

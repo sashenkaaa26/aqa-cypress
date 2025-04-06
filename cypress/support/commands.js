@@ -1,6 +1,6 @@
 // ***********************************************
 Cypress.Commands.add('login', (email, password) => {
-  cy.visit('https://qauto.forstudy.space/', {
+  cy.visit('/', {
     auth: {
       username: 'guest',
       password: 'welcome2qauto',
@@ -10,27 +10,45 @@ Cypress.Commands.add('login', (email, password) => {
   cy.get('button.btn.btn-outline-white.header_signin').click();
   cy.get('#signinEmail').type(email);
   cy.get('#signinPassword').type(password, { sensitive: true });
-
-  cy.get('div.modal-footer')
-    .contains('Login')
-    .should('not.be.disabled')
-    .click();
-
-    cy.get('button#userNavDropdown', { timeout: 10000 }).should('be.visible');
+  cy.contains('button', 'Login').should('not.be.disabled').click();
+  cy.get('button#userNavDropdown', { timeout: 15000 }).should('be.visible');
 });
 
-Cypress.Commands.overwrite('type', (originalFn, element, text, options = {}) => {
-  if (options.sensitive) {
-    options.log = false;
-    Cypress.log({
-      $el: element,
-      name: 'type',
-      message: '*'.repeat(text.length),
-    });
-  }
 
-  return originalFn(element, text, options);
-});
+
+
+// Cypress.Commands.add('login', (email, password) => {
+//   cy.visit('https://qauto.forstudy.space/', {
+//     auth: {
+//       username: 'guest',
+//       password: 'welcome2qauto',
+//     },
+//   });
+
+//   cy.get('button.btn.btn-outline-white.header_signin').click();
+//   cy.get('#signinEmail').type(email);
+//   cy.get('#signinPassword').type(password, { sensitive: true });
+
+//   cy.get('div.modal-footer')
+//     .contains('Login')
+//     .should('not.be.disabled')
+//     .click();
+
+//     cy.get('button#userNavDropdown', { timeout: 10000 }).should('be.visible');
+// });
+
+// Cypress.Commands.overwrite('type', (originalFn, element, text, options = {}) => {
+//   if (options.sensitive) {
+//     options.log = false;
+//     Cypress.log({
+//       $el: element,
+//       name: 'type',
+//       message: '*'.repeat(text.length),
+//     });
+//   }
+
+//   return originalFn(element, text, options);
+// });
 
 
 

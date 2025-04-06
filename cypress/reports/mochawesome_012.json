@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-04-06T15:23:10.232Z",
+    "end": "2025-04-06T15:23:29.893Z",
+    "duration": 19661,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4a85685d-6e84-4e9d-8e17-002e32b61c80",
+      "title": "",
+      "fullFile": "cypress\\e2e\\garage_expenses.cy.js",
+      "file": "cypress\\e2e\\garage_expenses.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "79cc41f9-e08b-4bdf-b505-9451e8fb1ac0",
+          "title": "Garage & Fuel Expenses Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add a new car",
+              "fullTitle": "Garage & Fuel Expenses Flow Add a new car",
+              "timedOut": null,
+              "duration": 11517,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_garagePage.garagePage.openAddCarForm();\n_garagePage.garagePage.fillCarForm('Audi', 'Q7', '123456');\n_garagePage.garagePage.submitCar();\n_garagePage.garagePage.carShouldBeVisible('Q7');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `select[name=\"brand\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `select[name=\"brand\"]`, but never found it.\n    at GaragePage.fillCarForm (webpack://aqa-cypress/./cypress/pages/garagePage.js:7:7)\n    at Context.eval (webpack://aqa-cypress/./cypress/e2e/garage_expenses.cy.js:25:15)",
+                "diff": null
+              },
+              "uuid": "fe703ab2-b743-4d61-9053-654cd3d97f46",
+              "parentUUID": "79cc41f9-e08b-4bdf-b505-9451e8fb1ac0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add fuel expense to the car",
+              "fullTitle": "Garage & Fuel Expenses Flow Add fuel expense to the car",
+              "timedOut": null,
+              "duration": 7969,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_expensesPage.expensesPage.openExpenses();\n_expensesPage.expensesPage.addFuelRecord('50', '75');\n_expensesPage.expensesPage.recordShouldExist('50');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is `disabled`:\n\n`<button _ngcontent-jtb-c79=\"\" class=\"btn btn-primary\" disabled=\"\">Add an ...</button>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is `disabled`:\n\n`<button _ngcontent-jtb-c79=\"\" class=\"btn btn-primary\" disabled=\"\">Add an ...</button>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at Object.isNotDisabled (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:145674:58)\n    at runAllChecks (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:112377:26)\n    at retryActionability (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:112466:16)\n    at tryCatcher (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:144517:68)\n    at <unknown> (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:144458:14)\n    at tryCatcher (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:5420:46)",
+                "diff": null
+              },
+              "uuid": "5ca4eff0-398c-4c69-8aa6-8149c8be9c8e",
+              "parentUUID": "79cc41f9-e08b-4bdf-b505-9451e8fb1ac0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "fe703ab2-b743-4d61-9053-654cd3d97f46",
+            "5ca4eff0-398c-4c69-8aa6-8149c8be9c8e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19486,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2025-04-06T17:41:29.074Z",
+    "end": "2025-04-06T17:42:13.834Z",
+    "duration": 44760,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "671a3e67-262d-445b-b265-4f74e9d92b25",
+      "title": "",
+      "fullFile": "cypress\\e2e\\garage_expenses.cy.js",
+      "file": "cypress\\e2e\\garage_expenses.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "874e2750-51e5-4bfc-b29e-e96afabb5faf",
+          "title": "Garage & Fuel Expenses Flow for qauto",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a car",
+              "fullTitle": "Garage & Fuel Expenses Flow for qauto should add a car",
+              "timedOut": null,
+              "duration": 10239,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_garagePage.garagePage.openAddCarForm();\n_garagePage.garagePage.fillCarForm('Audi', 'Q7', '123456');\n_garagePage.garagePage.submitCar();\n_garagePage.garagePage.carShouldBeVisible('Q7');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `app-add-car-form .modal-footer button.btn.btn-primary`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `app-add-car-form .modal-footer button.btn.btn-primary`, but never found it.\n    at Object.submitCar (webpack://aqa-cypress/./cypress/pages/garagePage.js:17:7)\n    at Context.eval (webpack://aqa-cypress/./cypress/e2e/garage_expenses.cy.js:22:17)",
+                "diff": null
+              },
+              "uuid": "24b16fe6-2533-4c47-a7b8-6e4ea3bf6e29",
+              "parentUUID": "874e2750-51e5-4bfc-b29e-e96afabb5faf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should add fuel expense to the car",
+              "fullTitle": "Garage & Fuel Expenses Flow for qauto should add fuel expense to the car",
+              "timedOut": null,
+              "duration": 17372,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_expensesPage.expensesPage.openFuelExpenseModal('Q7');\n_expensesPage.expensesPage.addFuelRecord('123500', '50', '100');\n_expensesPage.expensesPage.expenseShouldBeVisible('50');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 15000ms: Expected to find content: 'Q7' within the selector: '.car_name' but never did.",
+                "estack": "AssertionError: Timed out retrying after 15000ms: Expected to find content: 'Q7' within the selector: '.car_name' but never did.\n    at Object.openFuelExpenseModal (webpack://aqa-cypress/./cypress/pages/expensesPage.js:3:56)\n    at Context.eval (webpack://aqa-cypress/./cypress/e2e/garage_expenses.cy.js:27:19)",
+                "diff": null
+              },
+              "uuid": "1c9195b2-1e54-4651-b040-a758ed17f2d3",
+              "parentUUID": "874e2750-51e5-4bfc-b29e-e96afabb5faf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "24b16fe6-2533-4c47-a7b8-6e4ea3bf6e29",
+            "1c9195b2-1e54-4651-b040-a758ed17f2d3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 27611,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "9f97f258-59b5-4428-a5b7-c3d6d962cc05",
+          "title": "Garage & Fuel Expenses Flow for qauto2",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a car",
+              "fullTitle": "Garage & Fuel Expenses Flow for qauto2 should add a car",
+              "timedOut": null,
+              "duration": 16842,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_garagePage.garagePage.openAddCarForm();\n_garagePage.garagePage.fillCarForm('Audi', 'Q7', '123456');\n_garagePage.garagePage.submitCar();\n_garagePage.garagePage.carShouldBeVisible('Q7');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 15000ms: Expected to find element: `button#userNavDropdown`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Garage & Fuel Expenses Flow...`",
+                "estack": "AssertionError: Timed out retrying after 15000ms: Expected to find element: `button#userNavDropdown`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Garage & Fuel Expenses Flow...`\n    at Context.eval (webpack://aqa-cypress/./cypress/support/commands.js:14:55)\n    at wrapped (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:138854:43)",
+                "diff": null
+              },
+              "uuid": "de10e500-9e5b-42f0-80d3-b13e08ee8e67",
+              "parentUUID": "9f97f258-59b5-4428-a5b7-c3d6d962cc05",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should add fuel expense to the car",
+              "fullTitle": "Garage & Fuel Expenses Flow for qauto2 should add fuel expense to the car",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_expensesPage.expensesPage.openFuelExpenseModal('Q7');\n_expensesPage.expensesPage.addFuelRecord('123500', '50', '100');\n_expensesPage.expensesPage.expenseShouldBeVisible('50');",
+              "err": {},
+              "uuid": "f62c5263-76e9-411a-a661-6a17c9e3dbff",
+              "parentUUID": "9f97f258-59b5-4428-a5b7-c3d6d962cc05",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "de10e500-9e5b-42f0-80d3-b13e08ee8e67"
+          ],
+          "pending": [],
+          "skipped": [
+            "f62c5263-76e9-411a-a661-6a17c9e3dbff"
+          ],
+          "duration": 16842,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
