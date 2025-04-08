@@ -5,7 +5,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    
+    "open:qauto2": "cypress open --config-file cypress.config.qauto2.js",
+
+    "register:users": "cypress run --spec cypress/e2e/register_users.cy.js",
+
+    "test:qauto": "cypress run --config-file cypress.config.qauto.js --spec cypress/e2e/garage_expenses.cy.js",
+    "test:qauto2": "cypress run --config-file cypress.config.qauto2.js --spec cypress/e2e/garage_expenses.cy.js",
+
+    "test:full:qauto": "npm run register:users && npm run test:qauto",
+    "test:full:qauto2": "npm run register:users && npm run test:qauto2"
   },
   "repository": {
     "type": "git",
@@ -20,6 +30,7 @@
   "homepage": "https://github.com/sashenkaaa26/aqa-cypress#readme",
   "description": "",
   "devDependencies": {
-    "cypress": "^14.2.0"
+    "cypress": "^14.2.0",
+    "mochawesome": "^7.1.3"
   }
 }

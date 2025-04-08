@@ -1,0 +1,152 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-04-06T17:29:46.004Z",
+    "end": "2025-04-06T17:30:11.988Z",
+    "duration": 25984,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f2c0da9c-80b9-4bbe-ae52-311d86fea417",
+      "title": "",
+      "fullFile": "cypress\\e2e\\garage_expenses.cy.js",
+      "file": "cypress\\e2e\\garage_expenses.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3b4ee811-98bc-4d91-acc8-8df680631b05",
+          "title": "Garage & Fuel Expenses Flow for qauto",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a car and add fuel expense",
+              "fullTitle": "Garage & Fuel Expenses Flow for qauto should add a car and add fuel expense",
+              "timedOut": null,
+              "duration": 13671,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_garagePage.garagePage.openAddCarForm();\n_garagePage.garagePage.fillCarForm('Audi', 'Q7', '123456');\n_garagePage.garagePage.submitCar();\nif (name === 'qauto') {\n  _garagePage.garagePage.carShouldBeVisible('Q7');\n  _expensesPage.expensesPage.openFuelExpenseModal();\n  _expensesPage.expensesPage.addFuelRecord('50', '100', '123600');\n  _expensesPage.expensesPage.recordShouldExist('50');\n} else {\n  cy.log('❗ Skipping fuel expense due to broken Add functionality on qauto2');\n}",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-dtp-c76=\"\" class=\"btn btn-primary\">Add car</button>`\n\nis being covered by another element:\n\n`<ngb-modal-window role=\"dialog\" tabindex=\"-1\" aria-modal=\"true\" class=\"d-block modal fade show\">...</ngb-modal-window>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-dtp-c76=\"\" class=\"btn btn-primary\">Add car</button>`\n\nis being covered by another element:\n\n`<ngb-modal-window role=\"dialog\" tabindex=\"-1\" aria-modal=\"true\" class=\"d-block modal fade show\">...</ngb-modal-window>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:112042:68)\n    at ensureDescendents (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:112093:5)\n    at ensureDescendentsAndScroll (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:112099:14)\n    at ensureElIsNotCovered (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:112230:5)\n    at runAllChecks (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:112429:52)\n    at retryActionability (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:112466:16)\n    at tryCatcher (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:144517:68)\n    at <unknown> (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:144458:14)\n    at tryCatcher (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:5420:46)",
+                "diff": null
+              },
+              "uuid": "1ac1290d-d8a3-42c0-b343-4c513bf220a4",
+              "parentUUID": "3b4ee811-98bc-4d91-acc8-8df680631b05",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1ac1290d-d8a3-42c0-b343-4c513bf220a4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13671,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2cce227d-8beb-4b5d-b3d4-76ade53379e2",
+          "title": "Garage & Fuel Expenses Flow for qauto2",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a car and add fuel expense",
+              "fullTitle": "Garage & Fuel Expenses Flow for qauto2 should add a car and add fuel expense",
+              "timedOut": null,
+              "duration": 12193,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_garagePage.garagePage.openAddCarForm();\n_garagePage.garagePage.fillCarForm('Audi', 'Q7', '123456');\n_garagePage.garagePage.submitCar();\nif (name === 'qauto') {\n  _garagePage.garagePage.carShouldBeVisible('Q7');\n  _expensesPage.expensesPage.openFuelExpenseModal();\n  _expensesPage.expensesPage.addFuelRecord('50', '100', '123600');\n  _expensesPage.expensesPage.recordShouldExist('50');\n} else {\n  cy.log('❗ Skipping fuel expense due to broken Add functionality on qauto2');\n}",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `button#userNavDropdown`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Garage & Fuel Expenses Flow...`",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `button#userNavDropdown`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Garage & Fuel Expenses Flow...`\n    at Context.eval (webpack://aqa-cypress/./cypress/support/commands.js:17:55)\n    at wrapped (https://qauto.forstudy.space/__cypress/runner/cypress_runner.js:138854:43)",
+                "diff": null
+              },
+              "uuid": "de6e8225-d7e2-42fe-988d-2491cac8deef",
+              "parentUUID": "2cce227d-8beb-4b5d-b3d4-76ade53379e2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "de6e8225-d7e2-42fe-988d-2491cac8deef"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12193,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-06T19:04:15.844Z",
+    "end": "2025-04-06T19:04:30.570Z",
+    "duration": 14726,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9d9045e7-cc35-45d7-ba92-82d18dd6bd1a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\garage_expenses.cy.js",
+      "file": "cypress\\e2e\\garage_expenses.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "da8fbf7b-fa20-4210-a611-9c0fd1b0b60f",
+          "title": "Garage & Fuel Expenses Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add a new car",
+              "fullTitle": "Garage & Fuel Expenses Flow Add a new car",
+              "timedOut": null,
+              "duration": 9242,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_garagePage.garagePage.openAddCarForm();\n_garagePage.garagePage.fillCarForm('Audi', 'Q7', '123456');\n_garagePage.garagePage.submitCar();\n_garagePage.garagePage.carShouldBeVisible('Q7');",
+              "err": {},
+              "uuid": "632c08b5-4f3c-49ce-a61a-0dce7bde408c",
+              "parentUUID": "da8fbf7b-fa20-4210-a611-9c0fd1b0b60f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add fuel expense to the car",
+              "fullTitle": "Garage & Fuel Expenses Flow Add fuel expense to the car",
+              "timedOut": null,
+              "duration": 5336,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (Cypress.config('baseUrl').includes('qauto2')) {\n  cy.log('⚠️ Пропускаем добавление расхода топлива — баг с кнопкой Add');\n  return;\n}\n_expensesPage.expensesPage.openFuelExpenseModal('Audi Q7');\n_expensesPage.expensesPage.addFuelRecord('50', '100', '123500');\n_expensesPage.expensesPage.recordShouldExist('50');",
+              "err": {},
+              "uuid": "78913161-51aa-481c-b466-b95a63b12253",
+              "parentUUID": "da8fbf7b-fa20-4210-a611-9c0fd1b0b60f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "632c08b5-4f3c-49ce-a61a-0dce7bde408c",
+            "78913161-51aa-481c-b466-b95a63b12253"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14578,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
